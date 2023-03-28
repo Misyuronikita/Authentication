@@ -7,7 +7,11 @@ if (empty($login) || empty($password)) {
     echo 'You need to fill all fields';
 }
 else{
-    $sql = "SELECT * FROM `users` WHERE login = '$login' AND password = '$password'";
+
+    $sql = "SELECT *
+            FROM `users` 
+            WHERE login = '$login' AND password = '$password'";
+
     $result = $connection->query($sql);
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()){

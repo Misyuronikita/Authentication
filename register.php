@@ -15,12 +15,21 @@ else
         echo "Password don't match. Fix it";
     }
     else{
-        $sql = "INSERT INTO `users` (login, password, email) VALUES ('$login', '$password', '$email')";
-        if($connection->query($sql)){
-            echo "User signed up successfully";
+        if(strlen($password) < 8){
+            echo "Password must be more than 8 signs";
         }
         else{
-            echo "Error: " . $connection->error;
+
+            $sql = "INSERT INTO `users` (login, password, email)
+                    VALUES ('$login', '$password', '$email')";
+
+            if($connection->query($sql)){
+                echo "User signed up successfully";
+            }
+            else{
+                echo "Error: " . $connection->error;
+            }
         }
+
     }
 }
