@@ -10,7 +10,9 @@
     <title>Authentication</title>
 </head>
 <body>
-
+<?php
+        include 'send.php';
+        ?>
 <h1>My project</h1><br>
 <div class="form-container">
     <h2>Registration</h2>
@@ -40,12 +42,14 @@
         <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Email" name="email">
         </label>
     </div>
-    <div class="btnSI">
-    <button class="signIn" type="submit" name="send" value="Submit">Sign Up</button>
+    <div class="btnSU">
+    <button class="signUp" type="submit" name="send" value="Submit">Sign Up</button>
     </div>
+    <?php if(!empty($message)){ ?>
     <div class="success">
-        <strong>Success</strong>
+        <strong><?php echo $message; ?></strong>
     </div>
+    <?php } ?>
 </form>
 </div>
 
