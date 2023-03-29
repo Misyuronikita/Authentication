@@ -45,11 +45,6 @@
     <div class="btnSU">
     <button class="signUp" type="submit" name="send" value="Submit">Sign Up</button>
     </div>
-    <?php if(!empty($message)){ ?>
-    <div class="success">
-        <strong><?php echo $message; ?></strong>
-    </div>
-    <?php } ?>
 </form>
 </div>
 

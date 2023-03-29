@@ -9,8 +9,4 @@ if(!empty($_POST["send"])){
     $mailHeaders = "Login: " . $login .
         "\r\n Password: " . $password .
         "\r\nMessage: " . $message . "\r\n";
-
-    if(mail($toEmail, $login, $mailHeaders)){
-        $message = "Your Information is received successfully";
-    }
 }
