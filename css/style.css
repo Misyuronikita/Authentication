@@ -66,3 +66,34 @@ h1{
 em{
     color: red;
 }
+.password_label{
+    position: relative;
+}
+.password_img{
+    position: absolute;
+    cursor: pointer;
+    right: 15px;
+    top: 35px;
+
+}
+.password_img::after{
+    position: absolute;
+    content: "";
+    top: 11px;
+    right: 0;
+    width: 26px;
+    height: 3px;
+
+    background: #222222;
+    transform: rotate(45deg);
+    transition: .3s all ease;
+    opacity: 1;
+}
+.password_img.active::after{
+    opacity: 0;
+}
+.eye{
+    width: 26px;
+    height: 26px;
+}
+
