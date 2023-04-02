@@ -14,58 +14,8 @@
         include 'send.php';
         ?>
 <h1>My project</h1><br>
-<div class="form-container">
-    <h2>Registration</h2>
-<form action="register.php" method="post" name="registerContent">
-    <div class="input-row">
-        <label> Your Login <em>*</em>
-            <input type="text" class="form-control" placeholder="Login" name="login" required>
-        </label>
-    </div>
-    <div class="input-row">
-        <label class="password_label"> Input your password <em>*</em>
-            <input type="password" class="input_password" placeholder="Password" name="password" required>
-            <div class="password_img">
-                <img src="/img/view.png" alt="img" class="eye">
-            </div>
-        </label>
-    </div>
-    <div class="input-row">
-        <label> Confirm your password <em>*</em>
-        <input type="password" class="input_confirm_password" placeholder="Repeat Password" name="repeatPassword" required>
-
-        </label>
-    </div>
-    <div class="input-row">
-        <label> Send a message <em>*</em>
-            <textarea class="form-control" name = "message" placeholder="Message" required></textarea>
-        </label>
-    </div>
-    <div class="input-row">
-        <label> Input your email <em>*</em>
-        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email" name="email">
-        </label>
-    </div>
-    <div class="btnSU">
-    <button class="signUp" type="submit" name="send" value="Submit">Sign Up</button>
-    </div>
-</form>
-</div>
-
-<br><h2>Authorisation</h2>
-<form action="login.php" method="post">
-    <div class="form-group">
-    <label> Input your login
-    <input type="text" class="form-control" placeholder="Login" name="login">
-    </label>
-    </div>
-        <div class="form-group">
-    <label> Input your password
-    <input type="text" class="form-control" placeholder="Password" name="password">
-    </label>
-        </div>
-    <button type="submit">Sign In</button>
-</form>
+<a href="register.html">REGISTRATION</a><br>
+<a href="authorisation.html">AUTHORISATION</a>
 </body>
 <script src="/js/main.js"></script>
 </html>
