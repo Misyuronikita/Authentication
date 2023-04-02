@@ -24,7 +24,8 @@ else
                     VALUES ('$login', '$password', '$email')";
 
             if($connection->query($sql)){
-                echo "User signed up successfully";
+                header ('Location: authorisation.html');  // перенаправление на нужную страницу
+                exit();
             }
             else{
                 echo "Error: " . $connection->error;
