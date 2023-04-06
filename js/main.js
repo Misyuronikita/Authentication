@@ -6,7 +6,7 @@ function showPassword(){
     eye.addEventListener('click', () =>{
         eye.classList.toggle('active');
 
-        if(first_input.getAttribute('type') === 'password' || second_input.getAttribute('type') === 'password'){
+        if(first_input.getAttribute('type') === 'password'){
             first_input.setAttribute('type', 'text')
             second_input.setAttribute('type', 'text')
         } else{
