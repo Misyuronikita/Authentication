@@ -2,8 +2,8 @@
 <?php
 include "db.php";
 
-$query = "SELECT login, email
-          FROM users ORDER BY login";
+$query = "SELECT *
+          FROM users";
 
 $result = mysqli_query($connection, $query);
 $users = mysqli_fetch_all($result);
@@ -21,10 +21,14 @@ mysqli_close($connection);
 <h1>List of users</h1>
 <?php
 foreach ($users as $key => $user){
-    $login = $user[0];
-    $email = $user[1];
-    echo "<b>LOGIN</b>:$login".'<br>'.
-         "<b>EMAIL</b>:$email".'<br>'.'<br>';
+    $id = $user[0];
+    $login = $user[1];
+    $password = $user[2];
+    $email = $user[3];
+    echo "<a href='edit.php?id=$id'><b>ID</b>:$id</a><br>
+          <a><b>LOGIN</b>:$login</a><br>
+          <a><b>EMAIL</b>:$email</a><br>
+          <a><b>PASSWORD</b>:$password</a><br><br>";
 }
 ?>
 </body>
