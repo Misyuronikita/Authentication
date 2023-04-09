@@ -25,10 +25,15 @@ foreach ($users as $key => $user){
     $login = $user[1];
     $password = $user[2];
     $email = $user[3];
-    echo "<a href='edit.php?id=$id'><b>ID</b>:$id</a><br>
+    echo "<button><a href='edit.php?id=$id'><b>EDIT</b></a><br></button><br>
           <a><b>LOGIN</b>:$login</a><br>
           <a><b>EMAIL</b>:$email</a><br>
-          <a><b>PASSWORD</b>:$password</a><br><br>";
+          <a><b>PASSWORD</b>:$password</a><br>
+          <form action='delete.php' method='post'>
+          <input type='hidden' name='id', value='$id'>
+          <input type='submit' value='DELETE'><br><br><br>     
+          </form>
+         ";
 }
 ?>
 </body>
